@@ -2,6 +2,7 @@
 
 
 
+
 # dictionary
 
 Dictionary app that can work without JavaScript or internet.
