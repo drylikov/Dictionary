@@ -25,6 +25,7 @@ Dictionary app that can work without JavaScript or internet.
 
 
 
+
 ## Size
 
 *   CSS: **1.49 kb** GZipped (written for modern browsers w/o prefixed though)
