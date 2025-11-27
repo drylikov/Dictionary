@@ -58,6 +58,7 @@ initialising the service worker cache).
 | Regular 4G | 221ms            |
 | Wifi       | 145ms            |
 
+
 ## Build
 
 `git clone`, then configure a [`.env`][env] file with a
