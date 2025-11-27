@@ -45,6 +45,7 @@ Dictionary app that can work without JavaScript or internet.
 
 
 
+
 Loading `/dictionary` afresh (first load) transfers 114 kb (app itself, and
 initialising the service worker cache).
 
