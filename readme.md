@@ -31,6 +31,7 @@ Dictionary app that can work without JavaScript or internet.
 
 
 
+
 *   CSS: **1.49 kb** GZipped (written for modern browsers w/o prefixed though)
 *   JS: **46.6 kb** GZipped (mostly [`pouch`][pouch]) written in ES5
 *   HTML: **2.17 kb** GZipped (small, 1 entry), **4.26 kb** GZipped (large,
