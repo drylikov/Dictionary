@@ -37,6 +37,7 @@ Dictionary app that can work without JavaScript or internet.
 *   HTML: **2.17 kb** GZipped (small, 1 entry), **4.26 kb** GZipped (large,
     21 entries)
 
+
 ## Performance
 
 Loading `/dictionary` afresh (first load) transfers 114 kb (app itself, and
