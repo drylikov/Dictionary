@@ -1,0 +1,77 @@
+{
+  "name": "dictionary",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Dictionary app that can work without JavaScript or internet",
+  "license": "MIT",
+  "keywords": [
+    "service worker",
+    "offline",
+    "dictionary",
+    "app"
+  ],
+  "repository": "https://github.com/drylikov/dictionary",
+  "bugs": "https://github.com/drylikov/dictionary/issues",
+  "author": "Denis Rylikov <denis.rylikov@protonmail.com>",
+  "contributors": [
+    ""
+  ],
+  "dependencies": {
+    "compression": "^1.6.2",
+    "concat-stream": "^2.0.0",
+    "debounce": "^1.0.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.14.0",
+    "global": "^4.3.1",
+    "leveldown": "^5.0.0",
+    "levelup": "^4.0.0",
+    "pouchdb": "^7.0.0",
+    "vdom-to-html": "^2.3.0",
+    "virtual-dom": "^2.1.1"
+  },
+  "devDependencies": {
+    "browserify": "^16.0.0",
+    "prettier": "^1.17.1",
+    "remark-cli": "^6.0.0",
+    "remark-preset-drylikov": "^4.0.0",
+    "stylelint": "^10.0.0",
+    "stylelint-config-standard": "^18.0.0",
+    "tinyify": "^2.5.0",
+    "xo": "^0.24.0"
+  },
+  "scripts": {
+    "start": "node server",
+    "format-md": "remark . -qfo",
+    "format-js": "prettier --write \"**/*.js\" && xo --fix",
+    "format-css": "stylelint public/index.css --fix",
+    "format": "npm run format-md && npm run format-js && npm run format-css",
+    "build-worker": "browserify lib/worker -p tinyify -o public/worker.js",
+    "build-bundle": "browserify lib/browser -p tinyify -o public/index.js",
+    "build": "npm run build-worker && npm run build-bundle",
+    "test": "npm run build && npm run format"
+  },
+  "remarkConfig": {
+    "plugins": [
+      "preset-drylikov"
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false,
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "semi": false,
+    "trailingComma": "none"
+  },
+  "xo": {
+    "prettier": true,
+    "esnext": false,
+    "ignore": [
+      "public/worker.js",
+      "public/index.js"
+    ]
+  }
+}
