@@ -40,6 +40,7 @@ Dictionary app that can work without JavaScript or internet.
 
 
 
+
 ## Performance
 
 Loading `/dictionary` afresh (first load) transfers 114 kb (app itself, and
